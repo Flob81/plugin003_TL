@@ -1,6 +1,6 @@
 {
-  "name": "configurable-validation-edit",
-  "version": "0.1.54",
+  "name": "traffic-light-edit",
+  "version": "0.1.0",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -9,7 +9,7 @@
     "@atlaskit/form": "^9.0.10",
     "@atlaskit/page-header": "^10.4.7",
     "@atlaskit/section-message": "^6.4.21",
-    "@atlaskit/textfield": "^6.0.1",
+    "@atlaskit/select": "^18.0.9",
     "@forge/bridge": "5.3.0",
     "react": "^16",
     "react-dom": "^16",
