@@ -1,9 +1,11 @@
-# Forge "Configurable validation"
+# Forge "Traffic Light custom field"
 
-This project contains a Forge app written in Javascript that validates the input value of a Jira custom field using admin-provided RegExp.
+This project contains a Forge app that adds a Jira custom field type representing a traffic light status. The field is a single-select list with the predefined values:
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge,
-including the [documentation of Forge custom fields](https://developer.atlassian.com/platform/forge/manifest-reference/#jira-custom-field).
+- "⚪️⚪️⚪️" (default)
+- "🔴⚪️⚪️"
+- "⚪️🟡⚪️"
+- "⚪️⚪️🟢"
 
 ## Requirements
 
@@ -11,39 +13,38 @@ See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/)
 
 ## Quick start
 
-- Install dependencies (inside of the root directory):
+- Install dependencies in the root directory:
 
 ```sh
 npm install
 ```
 
-- Install dependencies (inside of the `static/configurable-validation` directory):
+- Install dependencies for the custom field UI:
 
 ```sh
+cd static/edit
 npm install
 ```
 
-- Modify your app by editing the files in `static/configurable-validation/src/`.
-
-- Build your app (inside of the `static/onfigurable-validation` directory):
+- Build the UI (from the `static/edit` directory):
 
 ```sh
 npm run build
 ```
 
-- Build and deploy your app by running:
+- Build and deploy the app:
 
 ```sh
 forge deploy
 ```
 
-- Install your app in an Atlassian site by running:
+- Install the app on an Atlassian site:
 
 ```sh
 forge install
 ```
 
-- Develop your app by running `forge tunnel` to proxy invocations locally:
+- Develop your app locally by running:
 
 ```sh
 forge tunnel
@@ -51,9 +52,9 @@ forge tunnel
 
 ### Notes
 
-- Use the `forge deploy` command when you want to persist code changes.
-- Use the `forge install` command when you want to install the app on a new site.
-- Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
+- Use `forge deploy` to persist code changes.
+- Use `forge install` to install the app on a new site.
+- Once the app is installed on a site, deployments automatically update the app without reinstalling.
 
 ## Support
 
